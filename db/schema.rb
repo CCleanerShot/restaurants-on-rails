@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 8) do
+ActiveRecord::Schema[8.0].define(version: 9) do
   create_table "restaurant_tags", force: :cascade do |t|
     t.integer "restaurant_id", null: false
     t.integer "tag_id", null: false
@@ -35,6 +35,7 @@ ActiveRecord::Schema[8.0].define(version: 8) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "google_restaurant_id"
     t.index ["latitude", "longitude"], name: "index_restaurants_on_latitude_and_longitude"
     t.index ["name"], name: "index_restaurants_on_name"
   end
