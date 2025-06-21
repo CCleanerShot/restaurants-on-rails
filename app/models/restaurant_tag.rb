@@ -27,8 +27,5 @@ class RestaurantTag < ApplicationRecord
     self.upvotes = tag_votes.where(vote_type: "up").count
     self.downvotes = tag_votes.where(vote_type: "down").count
     save!
-
-    # Auto-remove if threshold met
-    destroy if should_be_removed?
   end
 end
