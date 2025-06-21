@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# DUMP
+For going to a place on the map:
+
+https://www.google.com/maps/search/?api=1&query=Google&query_place_id=(ID)

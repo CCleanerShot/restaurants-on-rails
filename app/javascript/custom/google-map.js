@@ -67,6 +67,7 @@ async function init() {
                     title: place.displayName,
                 });
 
+                markerView.element
                 bounds.extend(place.location);
                 console.log(place);
             });
