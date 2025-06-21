@@ -1,10 +1,71 @@
 <%# TODO: figure out how to do this properly %>
-<%= content_tag :div, "", id: "key", data: @google_maps_platform_api_key %>
+<%= content_tag :div, "", id: "key", "data-key": @google_maps_platform_api_key %>
 <style>
   #map {
-      height: 400px;
+      height: 100vh;
       width: 100%;
+  }
+
+  #overlay {
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      font-size: 11px;
+      height: 400px;
+      margin-left: 0.5rem;
+      position: absolute;
+      transform: translateY(calc(50vh - 50%));
+      width: 200px;
+      z-index: 10;
+  }
+
+  #overlay_contents {
+      padding: 0.5rem;
   }
 </style>
 
+<div id="overlay">
+  <div id="overlay_contents" style="display: none">
+    <a id="overlay_google_link">Link to Google Maps</a>
+    <h2 style="font-weight: bold">Details</h2>
+    <div class="overlay-item-container">
+      <label for="overlay_display_name">Name:</label>
+      <span id="overlay_display_name"></span>
+    </div>
+    <div class="overlay-item-container">
+      <label for="overlay_location">Location:</label>
+      <ul id="overlay_location">
+        <li>
+          <label for="overlay_location_lat">Latitude:</label>
+          <span id="overlay_location_lat"></span>
+        </li>
+        <li>
+          <label for="overlay_location_lng">Longitude:</label>
+          <span id="overlay_location_lng"></span>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay-item-container">
+      <label for="overlay_business_status">Status:</label>
+      <span id="overlay_business_status"></span>
+    </div>
+    <div class="overlay-item-container">
+      <label for="overlay_national_phone_number">Phone Number:</label>
+      <span id="overlay_national_phone_number"></span>
+    </div>
+    <div class="overlay-item-container">
+      <span id="overlay_postal_address">
+        <span id="overlay_postal_address_region_code"></span>
+        <span id="overlay_postal_address_language_code"></span>
+        <span id="overlay_postal_address_postal_code"></span>
+        <span id="overlay_postal_address_sorting_code"></span>
+        <span id="overlay_postal_address_administrative_area"></span>
+        <span id="overlay_postal_address_locality"></span>
+        <span id="overlay_postal_address_address_lines"></span>
+      </span>
+    </div>
+  </div>
+</div>
 <div id="map"></div>
