@@ -35,7 +35,7 @@ ActiveRecord::Schema[8.0].define(version: 10) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "google_restaurant_id"
+    t.string "google_restaurant_id", null: false
     t.index ["latitude", "longitude"], name: "index_restaurants_on_latitude_and_longitude"
     t.index ["name"], name: "index_restaurants_on_name"
   end
