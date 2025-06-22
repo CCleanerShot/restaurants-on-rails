@@ -234,7 +234,6 @@ async function init() {
         return;
     }
 
-
     const key = element.getAttribute("data-key");
 
     // Creates the global `google` variable
@@ -269,10 +268,36 @@ async function init() {
             title: position.displayName,
         });
 
-        const places = fakeDB
-        // const { places } = await Place.searchNearby(request);
+        // const places = fakeDB
+
+        const request = {
+            // required parameters
+            fields: ["displayName", "location", "businessStatus", "postalAddress", "websiteURI", "nationalPhoneNumber", "editorialSummary"],
+            locationRestriction: {
+                center: position,
+                radius: 5000,
+            },
+            // optional parameters
+            includedPrimaryTypes: ["restaurant"],
+            language: "en-US",
+            region: "us",
+        };
+
+        const { places } = await Place.searchNearby(request);
 
         if (places.length) {
+            const test = places.map(e => ({
+                    address: e.postalAddress.addressLines[0],
+                    latitude: e.location.lat(),
+                    longitude: e.location.lng(),
+                    phone: e.nationalPhoneNumber,
+                    website: e.websiteURI,
+                    description: e.editorialSummary,
+                    name: e.displayName,
+            }));
+
+            console.log(test)
+
             const { LatLngBounds } = await google.maps.importLibrary("core");
             const bounds = new LatLngBounds();
 
