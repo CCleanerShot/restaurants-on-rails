@@ -158,8 +158,6 @@ erDiagram
    ```bash
    bundle install
    npm install
-   bundle exec rails db:setup
-   foreman start
    ```
 3. Create and migrate the database:
    ```bash
@@ -169,7 +167,7 @@ erDiagram
    ```
 4. Start the server:
    ```bash
-   rails server
+   foreman start
    ```
 
 ## Usage
