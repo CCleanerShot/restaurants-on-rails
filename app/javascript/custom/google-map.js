@@ -272,7 +272,7 @@ async function init() {
 
         const request = {
             // required parameters
-            fields: ["displayName", "location", "businessStatus", "postalAddress", "websiteURI", "nationalPhoneNumber", "editorialSummary"],
+            fields: ["displayName", "location", "businessStatus", "postalAddress", "websiteURI", "nationalPhoneNumber", "editorialSummary", "id"],
             locationRestriction: {
                 center: position,
                 radius: 5000,
@@ -294,6 +294,7 @@ async function init() {
                     website: e.websiteURI,
                     description: e.editorialSummary,
                     name: e.displayName,
+                    google_restaurant_id: e.id,
             }));
 
             console.log(test)
