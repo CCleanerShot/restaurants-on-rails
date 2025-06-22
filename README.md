@@ -157,6 +157,9 @@ erDiagram
 2. Install dependencies:
    ```bash
    bundle install
+   npm install
+   bundle exec rails db:setup
+   foreman start
    ```
 3. Create and migrate the database:
    ```bash
