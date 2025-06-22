@@ -326,25 +326,25 @@ puts "Created #{created_tags.count} tags"
 
 puts "Creating restaurant-tag associations..."
 restaurant_tag_mappings = {
-  "Machi Sushi" => ["sushi", "japanese", "seafood", "fresh", "casual", "takeout"],
-  "Cooper's Old Time Pit Bar-B-Que" => ["bbq", "texas", "pit-smoked", "ribs", "brisket", "hearty"],
-  "Sour Duck Market" => ["american", "comfort food", "market", "local", "seasonal", "casual"],
-  "Corner Restaurant" => ["modern", "american", "upscale", "cocktails", "downtown", "dinner"],
-  "Paperboy East" => ["breakfast", "brunch", "coffee", "casual", "hipster", "patio"],
-  "1618 Asian Fusion" => ["asian fusion", "cocktails", "contemporary", "dining", "patio", "creative"],
-  "Bouldin Creek Cafe" => ["vegetarian", "vegan", "cafe", "bohemian", "local", "casual"],
-  "Moonshine Grill" => ["comfort food", "southern", "brunch", "historic", "cocktails", "patio"],
-  "De Nada Cantina" => ["mexican", "tacos", "barbacoa", "outdoor seating", "casual", "cocktails"],
-  "Stubb's Bar-B-Q" => ["bbq", "live music", "brisket", "gospel brunch", "downtown", "beer"],
-  "Home Slice Pizza" => ["pizza", "new york style", "thin crust", "late night", "casual", "takeout"],
-  "Chick-fil-A" => ["fast food", "chicken", "sandwiches", "drive-thru", "family friendly", "quick"],
-  "Raising Cane's Chicken Fingers" => ["fast food", "chicken fingers", "sauce", "crispy", "fries", "quick"],
-  "Aba Austin" => ["mediterranean", "seafood", "cocktails", "upscale", "dining", "casual"],
-  "Caroline" => ["american", "brunch", "cocktails", "modern", "downtown", "friendly"],
-  "Matt's El Rancho" => ["tex-mex", "family friendly", "margaritas", "enchiladas", "casual", "historic"],
-  "Loro Asian Smokehouse & Bar" => ["asian fusion", "smokehouse", "texas bbq", "patio", "cocktails", "rustic"],
-  "Franklin Barbecue" => ["bbq", "brisket", "long lines", "texas", "pulled pork", "classic"],
-  "Terry Black's Barbecue" => ["bbq", "pit-smoked", "family style", "hearty", "classic"]
+  "Machi Sushi" => [ "sushi", "japanese", "seafood", "fresh", "casual", "takeout" ],
+  "Cooper's Old Time Pit Bar-B-Que" => [ "bbq", "texas", "pit-smoked", "ribs", "brisket", "hearty" ],
+  "Sour Duck Market" => [ "american", "comfort food", "market", "local", "seasonal", "casual" ],
+  "Corner Restaurant" => [ "modern", "american", "upscale", "cocktails", "downtown", "dinner" ],
+  "Paperboy East" => [ "breakfast", "brunch", "coffee", "casual", "hipster", "patio" ],
+  "1618 Asian Fusion" => [ "asian fusion", "cocktails", "contemporary", "dining", "patio", "creative" ],
+  "Bouldin Creek Cafe" => [ "vegetarian", "vegan", "cafe", "bohemian", "local", "casual" ],
+  "Moonshine Grill" => [ "comfort food", "southern", "brunch", "historic", "cocktails", "patio" ],
+  "De Nada Cantina" => [ "mexican", "tacos", "barbacoa", "outdoor seating", "casual", "cocktails" ],
+  "Stubb's Bar-B-Q" => [ "bbq", "live music", "brisket", "gospel brunch", "downtown", "beer" ],
+  "Home Slice Pizza" => [ "pizza", "new york style", "thin crust", "late night", "casual", "takeout" ],
+  "Chick-fil-A" => [ "fast food", "chicken", "sandwiches", "drive-thru", "family friendly", "quick" ],
+  "Raising Cane's Chicken Fingers" => [ "fast food", "chicken fingers", "sauce", "crispy", "fries", "quick" ],
+  "Aba Austin" => [ "mediterranean", "seafood", "cocktails", "upscale", "dining", "casual" ],
+  "Caroline" => [ "american", "brunch", "cocktails", "modern", "downtown", "friendly" ],
+  "Matt's El Rancho" => [ "tex-mex", "family friendly", "margaritas", "enchiladas", "casual", "historic" ],
+  "Loro Asian Smokehouse & Bar" => [ "asian fusion", "smokehouse", "texas bbq", "patio", "cocktails", "rustic" ],
+  "Franklin Barbecue" => [ "bbq", "brisket", "long lines", "texas", "pulled pork", "classic" ],
+  "Terry Black's Barbecue" => [ "bbq", "pit-smoked", "family style", "hearty", "classic" ]
 }
 
 restaurant_tag_mappings.each do |restaurant_name, tag_names|
@@ -638,7 +638,7 @@ reviews_data = [
     rating: 5,
     title: "Great for groups",
     content: "Grab a tray and feast. Best mac and cheese in town."
-  },
+  }
 ]
 
 reviews_data.each do |review_data|
