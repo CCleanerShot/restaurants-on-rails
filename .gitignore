@@ -12,6 +12,9 @@
 .env.test
 .env.production
 
+# Ignore regeneratable JS Modules.
+/node_modules
+
 # Ignore bundler config.
 /.bundle
 
