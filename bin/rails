@@ -1,4 +1,10 @@
 #!/usr/bin/env ruby
 APP_PATH = File.expand_path("../config/application", __dir__)
 require_relative "../config/boot"
-require "rails/commands"
+
+# NOTE: This is modified from just `require "rails/command"` for ease of use.
+if ARGV.first == "server"
+  system("foreman start")
+else
+  require "rails/commands"  
+end

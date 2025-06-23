@@ -167,7 +167,7 @@ erDiagram
    ```
 4. Start the server:
    ```bash
-   foreman start
+   rails server
    ```
 
 ## Usage
